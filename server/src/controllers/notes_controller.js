@@ -19,7 +19,7 @@ notesCtrl.createNote = async (req, res) => {
   }); // destructura el body en los campos de la bdd
   await newNote.save(); //Guarda la nota en la bdd
   console.log(newNote);
-  console.log("Nota guardada");
+  res.send("Nota guardada");
 };
 
 notesCtrl.updateNote = async (req, res) => {
