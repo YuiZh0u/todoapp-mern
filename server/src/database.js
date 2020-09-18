@@ -5,7 +5,8 @@ const URI = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'Agregar MONGODB
 
 mongoose.connect(URI, {
   useNewUrlParser: true,
-  useCreateIndex: true
+  useCreateIndex: true,
+  useFindAndModify: false
 }); //warnings mostrado en la ejecucion
 
 const connection = mongoose.connection;
