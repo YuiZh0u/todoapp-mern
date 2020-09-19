@@ -26,10 +26,10 @@ export default class CreateUser extends Component {
 
   submitUser = async (event) => {
     event.preventDefault(); // previene q se resete la pagina al submit
-    const newUser = await axios.post('http://localhost:4000/api/users', {username: this.state.username})
+    await axios.post('http://localhost:4000/api/users', {username: this.state.username})
     this.state.username = ""
     this.getUsers();
-    console.log(newUser);
+    // console.log(newUser);
   }
 
   deleteUser = async (id) => {
