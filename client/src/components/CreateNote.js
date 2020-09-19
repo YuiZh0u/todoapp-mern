@@ -17,7 +17,7 @@ export default class CreateNote extends Component {
     const resp = await axios.get('http://localhost:4000/api/users')
     this.setState({
       users: resp.data.map(user => user.username),
-      userSelected: resp.data[0].username
+      userSelected: resp.data[0].username //TODO: fix when no exist user
     })
     // console.log(this.state.users);
   }
