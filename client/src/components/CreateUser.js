@@ -8,6 +8,8 @@ export default class CreateUser extends Component {
     username: "",
   }
 
+// TODO: desplegar mensaje cuando un username ya existe
+
   async componentDidMount(){ //una vez q el componente es montado procede a renderizar
    this.getUsers();
   }

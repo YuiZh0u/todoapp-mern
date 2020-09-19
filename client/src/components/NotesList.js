@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 export default class NotesList extends Component {
 
@@ -41,8 +42,9 @@ export default class NotesList extends Component {
           this.state.notas.map( nota => (
             <div className="col-md-4 p-2" key={nota._id}>
               <div className="card">
-                <div className="card-header">
-                  <h5 className="text-center">{nota.title}</h5>
+                <div className="card-header d-flex justify-content-between">
+                  <h5>{nota.title}</h5>
+                  <Link className="btn btn-dark" to={`/edit/${nota._id}`}>Editar</Link>
                 </div>
                 <div className="card-body">
                   <p className="card-text">{nota.description}</p>
