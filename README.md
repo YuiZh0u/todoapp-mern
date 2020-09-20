@@ -1,4 +1,4 @@
-# ToDo Application
+# To do list Application
 Simple application of notes using MERN.
 
 ## Backend
